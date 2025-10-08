@@ -17,8 +17,19 @@
       .hamburger {display:flex;}
       header h1{font-size:1.5rem;}
     }
-    .hamburger {display:none; flex-direction:column; cursor:pointer; padding:12px;}
-    .hamburger span { width:28px; height:4px; background:#fff; margin:3px 0; border-radius:2px;}
+      .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 12px;
+  }
+  .hamburger span {
+    width: 28px;
+    height: 4px;
+    background: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+  }
     section {max-width:960px; margin:40px auto; padding:0 20px; background:#fff; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.05);}
     h2 { border-bottom:3px solid #00509e; padding-bottom:8px; color:#003366;}
     .skills-list{list-style:none; padding:0;}
@@ -26,7 +37,11 @@
     .result-images{display:flex; flex-wrap:wrap; gap:18px;}
     .result-images img{max-width:100%; height:auto; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.08);}
     .caption{font-size:0.95rem; color:#595959; margin-top:4px; background:#efefef; display:inline-block; padding:3px 11px; border-radius:3px;}
-    @media (max-width:600px){ section{margin:20px auto; padding:0 7px;} .result-images{flex-direction:column;} }
+      @media (max-width: 600px) {
+    .hamburger {
+      display: flex;
+    }
+  }
     footer{background:#003366; color:#c3d9ff; text-align:center; padding:20px 10px; margin-top:40px;}
     .contact-link{ color:#82b1ff; text-decoration:none;}
     .contact-link:hover{ text-decoration:underline;}
@@ -37,7 +52,9 @@
   <h1>Paras Sehrawat</h1>
   <p>Digital Marketing Executive</p>
   <div class="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </header>
 <nav id="navbar">
@@ -106,9 +123,9 @@
 </footer>
 <script>
   function toggleMenu() {
-    var nav = document.getElementById('navbar');
-    nav.classList.toggle('open');
+    document.getElementById('navbar').classList.toggle('open');
   }
 </script>
 </body>
 </html>
+

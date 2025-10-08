@@ -198,7 +198,7 @@
   <a href="#google-ads">Google Ads</a>
   <a href="#social-media">Meta Ads</a>
   <a href="#contact">Contact</a>
-</nav>
+  </nav>
 
 <section id="about">
   <h2>About Me</h2>
@@ -210,7 +210,6 @@
 <section id="skills">
   <h2>Skills</h2>
   <ul class="skills-list">
-    <li>30 WPM Typing speed</li>
     <li>Good communication skills</li>
     <li>Digital Marketing</li>
     <li>HTML, CSS, JS (Basic)</li>
@@ -247,6 +246,334 @@
     <li>roopakstores.com</li>
   </ul>
 </section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <ul class="experience-list">
+    <li>
+      <strong>Digital Marketing Executive (internship)</strong> — e-Definers Technology Pvt.Ltd (January 2025 – September)
+      <ul>
+        <li>Developed and managed SEO and PPC campaigns that increased traffic by 40%</li>
+        <li>Optimized Google Ads accounts leading to a 35% reduction in CPA</li>
+        <li>Led social media marketing strategies for multiple platforms</li>
+      </ul>
+    </li>
+    <li>
+
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p><strong>Mobile:</strong> 9873698387</p>
+  <p><strong>Email:</strong> <a class="contact-link" href="mailto:parassehrawat8@gmail.com">parassehrawat8@gmail.com</a></p>
+  <p><strong>LinkedIn:</strong> <a class="contact-link" href="http://www.linkedin.com/in/paras-sehrawat-7972ba29b" target="_blank" rel="noopener noreferrer">linkedin.com/in/paras-sehrawat-7972ba29b</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Paras Sehrawat. All Rights Reserved.
+</footer>
+
+<!-- Modal for image -->
+<div id="imgModal" class="modal" onclick="closeModal()" aria-hidden="true" aria-label="Image Modal">
+  <span class="close" role="button" aria-label="Close">&times;</span>
+  <img class="modal-content" id="modalImage" alt="Expanded Image" />
+  <div id="caption"></div>
+</div>
+
+<script>
+  // Hamburger menu toggle
+  function toggleMenu() {
+    document.getElementById('navbar').classList.toggle('open');
+  }
+
+  // Image modal/lightbox
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('modalImage');
+  const captionText = document.getElementById('caption');
+  const adsImg = document.getElementById('adsImg');
+
+  adsImg.onclick = function() {
+    modal.style.display = "block";
+    modal.setAttribute('aria-hidden', 'false');
+    modalImg.src = this.src;
+    captionText.textContent = this.alt;
+  }
+
+  function closeModal() {
+    modal.style.display = "none";
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  // Close modal if clicking close button or outside image area
+  modal.querySelector('.close').onclick = closeModal;
+  modal.onclick = function(event) {
+    if(event.target === modal) closeModal();
+  }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paras Sehrawat Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin:0;
+      background:#f4f7fb;
+      color:#333;
+    }
+    header {
+      background:#003366;
+      color:#fff;
+      padding:20px 0;
+      text-align:center;
+      position: relative;
+    }
+    nav {
+      background:#00509e;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      padding:10px 0;
+      position:sticky;
+      top:0;
+      z-index:100;
+      transition: max-height 0.3s ease;
+    }
+    nav a {
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 15px;
+      border-radius:4px;
+    }
+    nav a:hover {
+      background:#00254d;
+    }
+    .hamburger {
+      display:none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 12px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 110;
+    }
+    .hamburger span {
+      width: 28px;
+      height: 4px;
+      background: #fff;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    section {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      border-bottom: 3px solid #00509e;
+      padding-bottom: 8px;
+      color: #003366;
+    }
+    .skills-list, .project-list {
+      list-style: none;
+      padding: 0;
+    }
+    .skills-list li, .project-list li {
+      padding: 6px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .result-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 15px;
+    }
+    .result-images img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      cursor: pointer;
+      flex: 1 1 300px;
+      transition: transform 0.3s ease;
+    }
+    .result-images img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background:#003366;
+      color:#c3d9ff;
+      text-align:center;
+      padding:20px 10px;
+      margin-top:40px;
+    }
+    .contact-link {
+      color:#82b1ff;
+      text-decoration:none;
+    }
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        padding-left: 0;
+      }
+      nav.open {
+        max-height: 400px;
+        padding: 10px 0;
+      }
+      nav a {
+        padding: 14px 21px;
+        display: block;
+        width: 100%;
+      }
+      .hamburger {
+        display: flex;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .result-images {
+        flex-direction: column;
+      }
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1500;
+      padding-top: 60px;
+      left: 0; top: 0; width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.5);
+    }
+    #caption {
+      margin: auto;
+      display: block;
+      width: fit-content;
+      text-align: center;
+      color: #ccc;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+    .close:hover {
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Paras Sehrawat</h1>
+  <p>Digital Marketing Executive</p>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu" role="button" tabindex="0">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<nav id="navbar" aria-label="Primary navigation">
+  <a href="#about">About Me</a>
+  <a href="#skills">Skills</a>
+  <a href="#seo-projects">SEO Projects</a>
+  <a href="#google-ads">Google Ads</a>
+  <a href="#social-media">Meta Ads</a>
+  <a href="#contact">Contact</a>
+  </nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Experienced Digital Marketing Executive with a foundation in SEO, Google Ads, social media marketing, and website design. Focused on data-driven strategy, AI prompt engineering, and measurable results. Skilled in WordPress and intermediate Python.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul class="skills-list">
+    <li>Good communication skills</li>
+    <li>Digital Marketing</li>
+    <li>HTML, CSS, JS (Basic)</li>
+    <li>Python (Intermediate)</li>
+    <li>AI Prompt Engineering</li>
+    <li>WordPress Website Designing</li>
+  </ul>
+</section>
+
+<section id="seo-projects">
+  <h2>SEO Projects</h2>
+  <ul class="project-list">
+    <li>edtech.in</li>
+    <li>Edtechlearning.in</li>
+    <li>geevok.com</li>
+    <li>surrcars.com</li>
+  </ul>
+</section>
+
+<section id="google-ads">
+  <h2>Google Ads Campaigns</h2>
+  <ul class="project-list">
+    <li>Mytourpackage.in</li>
+  </ul>
+  <div class="result-images">
+    <img src="https://res.cloudinary.com/dmcs6be03/image/upload/v1759913892/google_ads_fkkryu.png" alt="Google Ads Campaign" id="adsImg" />
+  </div>
+</section>
+
+<section id="social-media">
+  <h2>Meta Ads Campaigns</h2>
+  <ul class="project-list">
+    <li>Nortusfitness.com</li>
+    <li>roopakstores.com</li>
+  </ul>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <ul class="experience-list">
+    <li>
+      <strong>Digital Marketing Executive (internship)</strong> — e-Definers Technology Pvt.Ltd (January 2025 – September)
+      <ul>
+        <li>Developed and managed SEO and PPC campaigns that increased traffic by 40%</li>
+        <li>Optimized Google Ads accounts leading to a 35% reduction in CPA</li>
+        <li>Led social media marketing strategies for multiple platforms</li>
+      </ul>
+    </li>
+    <li>
+
 
 <section id="contact">
   <h2>Contact</h2>
